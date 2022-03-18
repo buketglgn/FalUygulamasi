@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.buketgulgun.faluygulamasi.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_falgonderrFragment"
+            app:destination="@id/falgonderrFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_gelenkutusuFragment2"
+            app:destination="@id/gelenkutusuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.buketgulgun.faluygulamasi.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/falgonderrFragment"
+        android:name="com.buketgulgun.faluygulamasi.FalgonderrFragment"
+        android:label="fragment_falgonderr"
+        tools:layout="@layout/fragment_falgonderr" >
+        <action
+            android:id="@+id/action_falgonderrFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gelenkutusuFragment2"
+        android:name="com.buketgulgun.faluygulamasi.GelenkutusuFragment"
+        android:label="fragment_gelenkutusu"
+        tools:layout="@layout/fragment_gelenkutusu" >
+        <action
+            android:id="@+id/action_gelenkutusuFragment2_to_falokuFragment"
+            app:destination="@id/falokuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/falokuFragment"
+        android:name="com.buketgulgun.faluygulamasi.FalokuFragment"
+        android:label="fragment_faloku"
+        tools:layout="@layout/fragment_faloku" >
+        <argument
+            android:name="falidd"
+            app:argType="integer" />
+    </fragment>
+</navigation>

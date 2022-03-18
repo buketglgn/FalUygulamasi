@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FalgonderrFragment">
+
+    <EditText
+        android:id="@+id/soyad1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Soyad"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/burc1EditText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ad1EditText" />
+
+    <EditText
+        android:id="@+id/burc1EditText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Burç"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/meslek1EditText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soyad1EditText" />
+
+    <EditText
+        android:id="@+id/meslek1EditText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Meslek"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/dogumtarihi1EditText5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/burc1EditText3" />
+
+    <EditText
+        android:id="@+id/dogumtarihi1EditText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="Doğum Tarihi"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/iliskiEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meslek1EditText4" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="402dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/ad1EditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="5dp"
+            android:onClick="gorselSec"
+            android:src="@drawable/falekle"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="5dp"
+            android:onClick="gorselSec"
+            android:src="@drawable/falekle"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:onClick="gorselSec"
+            android:src="@drawable/falekle"
+            app:layout_column="2"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <EditText
+        android:id="@+id/ad1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Ad"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/soyad1EditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <EditText
+        android:id="@+id/iliskiEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="İlişki Durumu"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/buttonfalgonder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dogumtarihi1EditText5" />
+
+    <Button
+        android:id="@+id/buttonfalgonder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:onClick="faligonder"
+        android:text="Falı Gönder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iliskiEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
